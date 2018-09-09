@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style=" margin: auto+200px;">
+
+
+	<div id="title" style=" width: 900px; height: 100px; background: MediumSeaGreen; color: white; text-align: center; line-height: 100px; "><h2>내 컴퓨터의 온실가스 배출양</h2></div>
+
+<div class="output1" style=" width: 900px; height: 100px; text-align: center; line-height: 100px ;">
+
+	<input type="text" placeholder="하루평균 컴퓨터사용시간은?" size="30" id="pcTime">시간
+
+	<button id="but">탄소발자국계산</button>
+
+	<div id="output" style="border:1px solid MediumSeaGreen; width: 900px; height: 300px; line-height: 300px;  color: MediumSeaGreen; ">당신의 컴퓨터가 내뿜는 온실기체의 양을 알려드립니다.
+	</div>
+
+	<script type="text/javascript">
+
+		but.onclick = function(){
+			var O = ((pcTime.value * 90)* 365) /1000;
+
+			var finalOutput = "당신의 하루 컴퓨터사용시간은 " + pcTime.value + "시간이고 당신의 컴퓨터가 일년동안 내뿜는 온실기체의 양은 " + O + "kg 입니다.";
+
+		output.innerHTML = finalOutput;
+	}
+	
+
+	</script>
+
+</body>
+</html>
